@@ -1,0 +1,24 @@
+<%- include('header') -%>
+<div class="container">
+
+
+<form data-bitwarden-watching="1" action="/login" method="post">
+    <fieldset>
+      <legend>Legend</legend>
+      <div class="form-group">
+        <label for="exampleInputEmail1" class="form-label mt-4">User Name</label>
+        <input type="email" class="form-control" name="username" placeholder="User Name">
+       
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1" class="form-label mt-4">Password</label>
+        <input type="password" class="form-control" name="password" placeholder="Password" autocomplete="off">
+      </div>
+
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </fieldset>
+  </form>
+
+  </div>
+
+

@@ -6,7 +6,8 @@ var logger = require('morgan');
 var helmet = require('helmet')
 
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+var cardRouter = require('./routes/card');
+var loginRouter = require('./routes/login');
 var contactRouter = require('./routes/contact');
 var aboutRouter = require('./routes/about');
 
@@ -17,16 +18,17 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 app.use(helmet());
-app.use(logger('dev'));
+//app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
+app.use('/login', loginRouter);
 app.use('/contact', contactRouter);
 app.use('/about', aboutRouter);
+app.use('/card', cardRouter);
 
 app.use('*',(req,res)=>{
   res.render('pagenotfound')

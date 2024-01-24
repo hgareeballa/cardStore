@@ -10,6 +10,16 @@
         <li>Email support</li>
         <li>Help center access</li>
       </ul>
-      <button type="button" class="btn btn-lg btn-block btn-outline-primary">Buy Me!</button>
+      <form action="/card" method="post">
+        <input type="hidden" value="<%= cardname %>" name="cardname">
+        <button value="Submit" 
+        class="btn btn-lg btn-block btn-outline-primary">Buy Me!</button>
+
+        </form>
+        
+      
     </div>
   </div>
+
+
+ 
